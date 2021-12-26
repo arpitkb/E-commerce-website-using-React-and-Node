@@ -52,7 +52,7 @@ export const getProducts = wrapAsync(async (req, res, next) => {
 
   // Pagination
   const page = parseInt(req.query.page) || 1;
-  const limit = 3;
+  const limit = 4;
   const startIndex = (page - 1) * limit;
   const total = await Product.countDocuments(JSON.parse(qs));
   const pages = Math.ceil(total / limit);

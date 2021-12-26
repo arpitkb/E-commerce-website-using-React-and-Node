@@ -7,8 +7,7 @@ main {
 }
 
 .error-text {
-  font-size: 0.9rem;
-  color: rgba(252, 143, 143, 0.89);
+  color: rgba(246, 255, 122, 0.938);
 }
 
 a {
@@ -176,7 +175,7 @@ td {
 
 .carousel-item {
   height: 55vh;
-  background-color: rgba(173, 173, 216, 0.644);
+  background-color: rgba(221, 165, 253, 0.233);
 }
 .carousel-item img {
   width: 22%;

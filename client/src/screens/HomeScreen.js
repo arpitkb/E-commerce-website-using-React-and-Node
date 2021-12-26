@@ -106,12 +106,31 @@ const HomeScreen = () => {
   return (
     <>
       <Meta />
-      {qs === "" && <TopCarousel />}
+      <div className='d-none d-sm-block'>{qs === "" && <TopCarousel />}</div>
       <>
         <hr className='p-0 m-0'></hr>
-        <Row className='align-items-center bg-search'>
-          <Col className='my-1' xs={3} sm='auto'>
-            <Button className='' onClick={handleShow}>
+        <Row className='align-items-center justify-content-center bg-search'>
+          <Col xs={12} sm={6}>
+            <Form onSubmit={searchHandler}>
+              <InputGroup className=''>
+                <InputGroup.Text className='px-2'>
+                  <i className='fas fa-search'></i>
+                </InputGroup.Text>
+                <Form.Control
+                  id='keyword'
+                  name='keyword'
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
+                  placeholder='search keyword'
+                />
+                <Button variant='secondary' type='submit'>
+                  Search
+                </Button>
+              </InputGroup>
+            </Form>
+          </Col>
+          <Col className='d-flex' xs={6} sm={3}>
+            <Button className='ms-auto' onClick={handleShow}>
               <i className='fas fa-sort'></i> Filters
             </Button>
 
@@ -212,26 +231,7 @@ const HomeScreen = () => {
               </Offcanvas.Body>
             </Offcanvas>
           </Col>
-          <Col xs={9} sm='auto'>
-            <Form onSubmit={searchHandler}>
-              <InputGroup className=''>
-                <InputGroup.Text className='px-2'>
-                  <i className='fas fa-search'></i>
-                </InputGroup.Text>
-                <Form.Control
-                  id='keyword'
-                  name='keyword'
-                  value={keyword}
-                  onChange={(e) => setKeyword(e.target.value)}
-                  placeholder='search keyword'
-                />
-                <Button variant='secondary' type='submit'>
-                  Search
-                </Button>
-              </InputGroup>
-            </Form>
-          </Col>
-          <Col className='d-grid d-sm-block' xs={12} sm='auto'>
+          <Col className='my-1' xs={6} sm={3}>
             <Button variant='light' onClick={removeFilter}>
               Clear filters
             </Button>
@@ -249,7 +249,7 @@ const HomeScreen = () => {
           <>
             <Row>
               {products.map((el) => (
-                <Col xs={12} sm={6} lg={4} xl={4} key={el._id}>
+                <Col xs={12} sm={6} lg={4} xl={3} key={el._id}>
                   <ProductItem key={el._id} product={el} />
                 </Col>
               ))}

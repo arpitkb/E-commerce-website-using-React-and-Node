@@ -8,6 +8,7 @@ import axios from "axios";
 import { PayPalButton } from "react-paypal-button-v2";
 import Loader from "../components/UI/Loader";
 import CardHeader from "react-bootstrap/esm/CardHeader";
+import Meta from "../components/UI/Meta";
 
 const PaymentDo = () => {
   const dispatch = useDispatch();
@@ -89,6 +90,7 @@ const PaymentDo = () => {
 
   return (
     <>
+      <Meta title='Paypal' />
       {!isValid && <h3 className='text-center'>Invalid order</h3>}
       {error && <Alert className='alert-fail'>{error}</Alert>}
       {isValid && (
