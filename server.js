@@ -1,6 +1,5 @@
 import express from "express";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
+import path from "path";
 import dotenv from "dotenv";
 import colors from "colors";
 import productRoutes from "./routes/product.js";
@@ -32,6 +31,7 @@ app.get("/api/config/paypal", (req, res) => {
 });
 
 //serve static assets in production
+const __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
   //set static folder
   app.use(express.static("client/build"));

@@ -15,6 +15,7 @@ import {
   RESET,
   ORDER_DELIVER_ERR,
   ORDER_DELIVER_SUCC,
+  GET_ALL_ORDERS_REQ,
 } from "../actions/types";
 
 export const orderReducer = (state = {}, action) => {
