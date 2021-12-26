@@ -1,0 +1,197 @@
+/* body {
+  background-color: white;
+} */
+
+main {
+  min-height: 82vh;
+}
+
+.error-text {
+  font-size: 0.9rem;
+  color: rgba(252, 143, 143, 0.89);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* button classes */
+.btn-lr {
+  border-radius: 0.7rem;
+}
+
+.btn-s {
+  padding: 0.7rem 1rem;
+}
+.btn-sx {
+  padding: 0.5rem 0.8rem;
+}
+.btn-sx1 {
+  padding: 0.75rem 0.85rem;
+}
+
+/* .btn:disabled {
+  background-color: rgba(109, 162, 207, 0.699);
+} */
+
+/* border classes */
+.rb1 {
+  border-radius: 1rem;
+}
+.rb2 {
+  border-radius: 2rem;
+}
+.rb3 {
+  border-radius: 2.5rem;
+}
+.rb4 {
+  border-radius: 3rem;
+}
+
+/* image classes */
+
+.img-cart {
+  max-width: 300px;
+}
+
+/* my badge */
+
+.mybadge {
+  font-size: 1.3rem;
+  background-color: rgba(140, 137, 218, 0.973);
+  padding: 0.1rem 0.4rem;
+  border-radius: 2rem;
+}
+
+/* text class */
+.text-lg {
+  font-size: 2rem;
+}
+.text-lg1 {
+  font-size: 1.5rem;
+}
+.text-sm1 {
+  font-size: 0.9rem;
+}
+
+.text-muted2 {
+  opacity: 0.8;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.text-muted3 {
+  font-weight: 500;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
+}
+
+.text-b1 {
+  color: rgb(21, 20, 37);
+}
+/* inputs */
+
+.form-control {
+  padding: 0.7rem 1rem;
+}
+
+.form-label {
+  margin-bottom: 0;
+}
+
+.nav-link:active {
+  border: none;
+}
+.nav-item:active {
+  border: none;
+}
+
+.link-container:active {
+  border: none;
+  background-color: red;
+}
+
+/* alerts */
+
+.alert-fail-bold {
+  background-color: rgba(240, 80, 80, 0.452);
+  color: rgb(124, 2, 2);
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+}
+.alert-fail {
+  background-color: rgba(240, 80, 80, 0.452);
+  color: rgb(124, 2, 2);
+  padding: 0.75rem 1rem;
+}
+
+.alert-succ-bold {
+  background-color: rgba(81, 194, 81, 0.541);
+  color: rgb(6, 92, 6);
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+}
+.alert-succ {
+  background-color: rgba(81, 194, 81, 0.541);
+  color: rgb(6, 92, 6);
+  padding: 0.75rem 1rem;
+}
+
+@media (max-width: 400px) {
+  .nav {
+    max-width: fit-content;
+    flex-direction: column;
+    background: transparent;
+    border: 0px solid red;
+    box-shadow: none;
+  }
+  .nav-item {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.form-check-input {
+  font-size: larger;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+/* table classes */
+
+.admin-product .table {
+  border-collapse: separate;
+  border-spacing: 0rem 1rem;
+}
+
+.tab-2 {
+  border-collapse: separate;
+  border-spacing: 0rem 1rem;
+}
+
+td {
+  /* color: rgba(68, 19, 133, 0.541); */
+  font-weight: 600;
+}
+
+.carousel-item {
+  height: 55vh;
+  background-color: rgba(173, 173, 216, 0.644);
+}
+.carousel-item img {
+  width: 22%;
+  border-radius: 25%;
+  margin: 1rem auto;
+}
+
+/* view details */
+.fa-1-5x {
+  font-size: 1.3rem;
+}
+
+.vd {
+  transition: all 0.15s ease-in;
+}
+.vd:hover {
+  transform: rotate(45deg);
+}
