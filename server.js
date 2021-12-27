@@ -18,7 +18,6 @@ import mongoSanitize from "express-mongo-sanitize";
 import helmet from "helmet";
 import xssClean from "xss-clean";
 import rateLimit from "express-rate-limit";
-import hpp from "hpp";
 
 const app = express();
 
@@ -43,9 +42,6 @@ const limiter = rateLimit({
   max: 50,
 });
 app.use(limiter);
-
-// Prevent http param pollution
-app.use(hpp());
 
 // all routes
 app.use("/api/products", productRoutes);
