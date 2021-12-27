@@ -13,6 +13,13 @@ import connectDB from "./config/db.js";
 import errorhandler from "./middlewares/error.js";
 import ErrorResponse from "./utils/ErrorResponse.js";
 
+// security middlewares
+import mongoSanitize from "express-mongo-sanitize";
+import helmet from "helmet";
+import xssClean from "xss-clean";
+import rateLimit from "express-rate-limit";
+import hpp from "hpp";
+
 const app = express();
 
 // connect to database
@@ -20,6 +27,26 @@ connectDB(process.env.MONGO_URI);
 
 app.use(express.json());
 app.use(fileUpload());
+
+// Sanitize data
+app.use(mongoSanitize());
+
+// Set security headers
+app.use(helmet());
+
+// Prevent XSS attacks
+app.use(xssClean());
+
+// Rate limiting
+const limiter = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  max: 50,
+});
+app.use(limiter);
+
+// Prevent http param pollution
+app.use(hpp());
+
 // all routes
 app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes);

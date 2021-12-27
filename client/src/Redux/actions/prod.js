@@ -150,8 +150,6 @@ export const createProduct =
           Authorization: `Bearer ${token}`,
         },
       };
-
-      // console.log(formData);
       const { image, price, category } = formData;
       if (!category || category === "") {
         dispatch({
@@ -162,6 +160,11 @@ export const createProduct =
         dispatch({
           type: PRODUCT_CREATE_ERR,
           payload: "price should be numeric ",
+        });
+      } else if (!image || !image.type) {
+        dispatch({
+          type: PRODUCT_CREATE_ERR,
+          payload: "Please remove and attach image again",
         });
       } else if (image.type.split("/")[0] !== "image") {
         dispatch({
@@ -179,8 +182,11 @@ export const createProduct =
         });
         await storeImage(formData.image)
           .then(async (url) => {
-            formData.image = url;
-            await axios.post(`/api/products`, formData, config);
+            await axios.post(
+              `/api/products`,
+              { ...formData, image: url },
+              config
+            );
 
             dispatch(setAlert("Product created succesfully", "success"));
 
