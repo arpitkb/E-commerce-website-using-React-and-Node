@@ -18,6 +18,7 @@ import mongoSanitize from "express-mongo-sanitize";
 import helmet from "helmet";
 import xssClean from "xss-clean";
 import rateLimit from "express-rate-limit";
+import hpp from "hpp";
 
 const app = express();
 
@@ -31,10 +32,13 @@ app.use(fileUpload());
 app.use(mongoSanitize());
 
 // Set security headers
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 
 // Prevent XSS attacks
 app.use(xssClean());
+
+// add hpp
+app.use(hpp());
 
 // Rate limiting
 const limiter = rateLimit({
