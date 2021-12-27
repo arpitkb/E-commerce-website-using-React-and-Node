@@ -11,7 +11,7 @@ Create a .env file in root folder and add the following
 NODE_ENV = development
 PORT = 8080
 MONGO_URI = your mongodb uri
-JWT_SECRET = any random alphbetic string
+JWT_SECRET = any random alphabetic string
 JWT_EXPIRES = 24d
 PAYPAL_CLIENT_ID = your paypal client id
 ```
