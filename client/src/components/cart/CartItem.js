@@ -8,6 +8,9 @@ const CartItem = ({ item, chngQty, remove }) => {
   // const addOne = () => {
   //   chngQty(item.product, parseInt(item.qty) + 1);
   // };
+
+  // extra code
+  
   // const removeOne = () => {
   //   if (item.qty === 1) return;
   //   chngQty(item.product, parseInt(item.qty) - 1);
