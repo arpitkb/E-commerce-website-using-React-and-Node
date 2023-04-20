@@ -288,7 +288,6 @@ export const addReview = (id, formData) => async (dispatch, getState) => {
 };
 
 // store image in firebase function
-
 const storeImage = async (image) => {
   return new Promise((resolve, reject) => {
     const storage = getStorage();
@@ -302,12 +301,9 @@ const storeImage = async (image) => {
       "state_changed",
       (snapshot) => {},
       (error) => {
-        // Handle unsuccessful uploads
         reject(error);
       },
       () => {
-        // Handle successful uploads on complete
-        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           resolve(downloadURL);
         });
