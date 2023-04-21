@@ -79,5 +79,5 @@ app.use(errorhandler);
 // listen to server
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
-  console.log(`server running on ${PORT}`.green.bold.inverse);
+  console.log(`server running on ${PORT}`);
 });
