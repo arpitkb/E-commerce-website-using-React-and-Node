@@ -28,7 +28,7 @@ connectDB(process.env.MONGO_URI);
 
 app.use(express.json());
 app.use(fileUpload());
-app.use(cors);
+app.use(cors());
 
 // Sanitize data
 app.use(mongoSanitize());
