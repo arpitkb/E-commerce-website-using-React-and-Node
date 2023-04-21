@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { createOrder } from "../Redux/actions/order";
 
-import axios from "../../axios";
+import axios from "../axios";
 import { PayPalButton } from "react-paypal-button-v2";
 import Loader from "../components/UI/Loader";
 import CardHeader from "react-bootstrap/esm/CardHeader";
