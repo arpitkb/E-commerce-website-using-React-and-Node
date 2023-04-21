@@ -1,7 +1,5 @@
 import express from "express";
-import path from "path";
 import dotenv from "dotenv";
-import colors from "colors";
 import productRoutes from "./routes/product.js";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/user.js";
