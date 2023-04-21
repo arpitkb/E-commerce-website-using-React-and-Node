@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const connectDB = async (db) => {
   try {
     await mongoose.connect(db);
-    console.log("Data base connected.....".cyan.inverse);
+    console.log("Data base connected.....");
   } catch (err) {
     console.log(err);
 
