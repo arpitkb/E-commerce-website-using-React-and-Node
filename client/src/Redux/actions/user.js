@@ -18,7 +18,7 @@ import {
   UPDATE_USER_SUCC,
 } from "./types";
 
-import axios from "axios";
+import axios from "../../axios";
 import { setAlert } from "./alert";
 import { updateUser } from "./auth";
 

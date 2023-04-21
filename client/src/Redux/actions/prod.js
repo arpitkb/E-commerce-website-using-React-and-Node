@@ -18,7 +18,7 @@ import {
   TOP_PRODUCTS_REQ,
   TOP_PRODUCTS_SUCC,
 } from "./types";
-import axios from "axios";
+import axios from "../../axios";
 import { setAlert } from "./alert";
 
 import {

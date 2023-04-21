@@ -7,6 +7,7 @@ import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/user.js";
 import orderRoutes from "./routes/order.js";
 import fileUpload from "express-fileupload";
+import cors from 'cors';
 
 dotenv.config();
 import connectDB from "./config/db.js";
@@ -27,6 +28,7 @@ connectDB(process.env.MONGO_URI);
 
 app.use(express.json());
 app.use(fileUpload());
+app.use(cors())
 
 // Sanitize data
 app.use(mongoSanitize());

@@ -13,7 +13,7 @@ import {
   UPDATE_USER_SUCC,
 } from "./types";
 
-import axios from "axios";
+import axios from "../../axios";
 
 export const loginUser = (email, password) => async (dispatch) => {
   try {

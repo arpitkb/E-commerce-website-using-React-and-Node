@@ -6,7 +6,7 @@ import {
   SAVE_PAYMENT_METHOD,
   SAVE_SHIPPING_ADDRESS,
 } from "./types";
-import axios from "axios";
+import axios from "../../axios";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
   try {

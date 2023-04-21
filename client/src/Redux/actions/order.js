@@ -21,7 +21,7 @@ import {
   PAYMENT_SUCC,
   REMOVE_NOTIF_ORDER,
 } from "./types";
-import axios from "axios";
+import axios from "../../axios";
 import { setAlert } from "./alert";
 
 export const createOrder =
